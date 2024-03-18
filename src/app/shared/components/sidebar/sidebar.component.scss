@@ -1,0 +1,25 @@
+.sidebar {
+  max-width: 220px;
+  padding: 16px 40px;
+
+  &__badge {
+    width: 140px;
+    height: 48px;
+    cursor: pointer;
+    display: grid;
+    background: #F9F9F8;
+    place-content: center;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    transition: ease-in-out .3s;
+
+    &:hover {
+      background: #E5E5E5;
+    }
+    
+    p {
+      font-weight: 600;
+      letter-spacing: 0.225em;
+    }
+  }
+}

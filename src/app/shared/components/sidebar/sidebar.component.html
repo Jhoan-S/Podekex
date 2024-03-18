@@ -1,0 +1,9 @@
+<div class="sidebar">
+
+  @for (type of types; track type.id) {
+    <div class="sidebar__badge">
+      <p [ngStyle]="{'color': type.textColor}">{{ type.name }}</p>
+    </div>
+  }
+
+</div>
