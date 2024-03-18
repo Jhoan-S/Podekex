@@ -5,6 +5,8 @@ import { ListComponent } from './views/list/list.component';
 import { DetailComponent } from './views/detail/detail.component';
 import { PokedexRoutingModule } from './pokedex-routing.module';
 import { SharedModule } from '../../shared/shared.module';
+import { CardWrapperComponent } from './components/card-wrapper/card-wrapper.component';
+import { PokeCardComponent } from './components/poke-card/poke-card.component';
 
 const components = [
   ListComponent,
@@ -18,6 +20,6 @@ const components = [
     PokedexRoutingModule
   ],
   exports: [...components],
-  declarations: [...components],
+  declarations: [...components, CardWrapperComponent, PokeCardComponent],
 })
 export class PokedexModule { }
