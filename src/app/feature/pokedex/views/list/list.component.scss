@@ -4,6 +4,16 @@
 
   &__list {
     width: 100%;
-    background-color: aqua;
+
+    &-wrapper {
+      height: 407px;
+      display: grid;
+      place-content: center;
+      background-color: rgb(234, 234, 234, 1);
+
+      &:nth-child(2n) {
+        background-color: rgb(234, 234, 234, .5);
+      }
+    }
   }
 }

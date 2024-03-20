@@ -6,9 +6,14 @@
     <app-sidebar />
   </div>
 
-  <div class="content__list">
+  <div class="content__list" *ngIf="pokemonList$ | async as pokemonList">
 
-    <p>list works!</p>
+    @for (pokemon of pokemonList.results; track pokemon.name) {
+      <div class="content__list-wrapper">
+        <app-card-wrapper [pokemonData]="pokemon" />
+      </div>
+    }
+
   </div>
 
 </div>

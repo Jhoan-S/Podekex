@@ -1,1 +1,23 @@
-<p>poke-card works!</p>
+<div class="card">
+
+  <div class="card__left-stat">
+    <p>{{ pokemon.height }}m</p>
+  </div>
+
+  <div class="card__right-stat">
+    <p>{{ pokemon.weight }}Kg</p>
+  </div>
+
+  <div class="card__id">
+    <p>#{{ pokemon.id }}</p>
+  </div>
+
+  <div class="card__img" *ngIf="pokemon.sprite">
+    <img [src]="pokemon.sprite" alt="name">
+  </div>
+
+  <div class="card__detail">
+    <h4>{{ pokemon.name | enhancedTitleCase }}</h4>
+    <p *ngIf="pokemon.types">{{ pokemon.types[0] | enhancedTitleCase }}</p>
+  </div>
+</div>

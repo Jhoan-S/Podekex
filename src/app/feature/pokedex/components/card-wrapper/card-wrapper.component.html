@@ -1,1 +1,15 @@
-<p>card-wrapper works!</p>
+<div class="wrapper">
+  <app-poke-card [pokemon]="pokemon" />
+
+  <div class="wrapper__stats">
+    @for (poke of pokemon.stats; track poke.name) {
+      <div class="wrapper__stats-group">
+        <p class="attr">{{ poke.name | enhancedTitleCase }}</p>
+        <p class="num">{{ poke.baseStat }}</p>
+        <div class="wrapper__stats-group-bar">
+          <div class="progress-success"></div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
